@@ -20,16 +20,16 @@ testing of each story.
 
 **Purpose**: Initialize the Next.js application, toolchain, provider environment, and shared app shell.
 
-- [ ] T001 Create package manifest, dependency list, and scripts in package.json
-- [ ] T002 Configure strict TypeScript settings in tsconfig.json
-- [ ] T003 [P] Configure Next.js application settings in next.config.ts
-- [ ] T004 [P] Configure linting rules in eslint.config.mjs
-- [ ] T005 [P] Configure Vitest test runner in vitest.config.ts
-- [ ] T006 [P] Create shared test setup in tests/setup.ts
-- [ ] T007 [P] Configure Playwright browser tests in playwright.config.ts
-- [ ] T008 [P] Create provider environment template with WEATHER_PROVIDER, GEOCODING_PROVIDER, and NEXT_PUBLIC_MAP_STYLE_URL in .env.example
-- [ ] T009 Create root App Router layout in app/layout.tsx
-- [ ] T010 Create global styles and design tokens in app/globals.css
+- [X] T001 Create package manifest, dependency list, and scripts in package.json
+- [X] T002 Configure strict TypeScript settings in tsconfig.json
+- [X] T003 [P] Configure Next.js application settings in next.config.ts
+- [X] T004 [P] Configure linting rules in eslint.config.mjs
+- [X] T005 [P] Configure Vitest test runner in vitest.config.ts
+- [X] T006 [P] Create shared test setup in tests/setup.ts
+- [X] T007 [P] Configure Playwright browser tests in playwright.config.ts
+- [X] T008 [P] Create provider environment template with WEATHER_PROVIDER, GEOCODING_PROVIDER, and NEXT_PUBLIC_MAP_STYLE_URL in .env.example
+- [X] T009 Create root App Router layout in app/layout.tsx
+- [X] T010 Create global styles and design tokens in app/globals.css
 
 ---
 
@@ -41,28 +41,28 @@ testing of each story.
 
 ### Foundational Tests
 
-- [ ] T011 [P] Create reusable weather/map test fixtures in tests/fixtures/weather.ts
-- [ ] T012 [P] Add schema validation unit tests for map, weather, provider config, and permission-denied states in tests/unit/weather-schemas.test.ts
-- [ ] T013 [P] Add unit conversion tests in tests/unit/weather-units.test.ts
-- [ ] T014 [P] Add viewport normalization and cache-key tests for bbox, zoom, layer, units, and location keys in tests/unit/map-viewport.test.ts
-- [ ] T015 [P] Add marker density tests in tests/unit/marker-density.test.ts
-- [ ] T016 [P] Add Open-Meteo weather normalization tests in tests/unit/weather-normalize.test.ts
-- [ ] T017 [P] Add cache policy tests for 5-minute marker, 24-hour search, and 10-minute forecast TTLs in tests/unit/cache-policy.test.ts
-- [ ] T018 [P] Add server environment validation tests for provider defaults and public map style safety in tests/unit/server-env.test.ts
-- [ ] T019 [P] Add server/client boundary tests preventing server-only imports in client components in tests/unit/server-client-boundary.test.ts
+- [X] T011 [P] Create reusable weather/map test fixtures in tests/fixtures/weather.ts
+- [X] T012 [P] Add schema validation unit tests for map, weather, provider config, and permission-denied states in tests/unit/weather-schemas.test.ts
+- [X] T013 [P] Add unit conversion tests in tests/unit/weather-units.test.ts
+- [X] T014 [P] Add viewport normalization and cache-key tests for bbox, zoom, layer, units, and location keys in tests/unit/map-viewport.test.ts
+- [X] T015 [P] Add marker density tests in tests/unit/marker-density.test.ts
+- [X] T016 [P] Add Open-Meteo weather normalization tests in tests/unit/weather-normalize.test.ts
+- [X] T017 [P] Add cache policy tests for 5-minute marker, 24-hour search, and 10-minute forecast TTLs in tests/unit/cache-policy.test.ts
+- [X] T018 [P] Add server environment validation tests for provider defaults and public map style safety in tests/unit/server-env.test.ts
+- [X] T019 [P] Add server/client boundary tests preventing server-only imports in client components in tests/unit/server-client-boundary.test.ts
 
 ### Foundational Implementation
 
-- [ ] T020 Implement domain schemas for locations, observations, forecasts, layers, preferences, and provider config in lib/weather/schemas.ts
-- [ ] T021 Implement metric/imperial conversion helpers in lib/weather/units.ts
-- [ ] T022 Implement viewport bounds normalization and request cache-key helpers in lib/map/viewport.ts
-- [ ] T023 Implement marker density and clustering rules in lib/map/marker-density.ts
-- [ ] T024 Implement Open-Meteo provider-to-domain weather normalization in lib/weather/normalize.ts
-- [ ] T025 Implement cache policy constants and in-flight deduplication helpers in lib/server/cache-policy.ts
-- [ ] T026 [P] Implement Open-Meteo weather provider adapter boundary in lib/server/weather-provider.ts
-- [ ] T027 [P] Implement Open-Meteo geocoding provider adapter boundary in lib/server/geocoding-provider.ts
-- [ ] T028 Implement server-only environment validation for WEATHER_PROVIDER, GEOCODING_PROVIDER, and NEXT_PUBLIC_MAP_STYLE_URL in lib/server/env.ts
-- [ ] T029 [P] Create reusable loading, empty, error, success, disabled, and permission-denied state component in components/ui/state-message.tsx
+- [X] T020 Implement domain schemas for locations, observations, forecasts, layers, preferences, and provider config in lib/weather/schemas.ts
+- [X] T021 Implement metric/imperial conversion helpers in lib/weather/units.ts
+- [X] T022 Implement viewport bounds normalization and request cache-key helpers in lib/map/viewport.ts
+- [X] T023 Implement marker density and clustering rules in lib/map/marker-density.ts
+- [X] T024 Implement Open-Meteo provider-to-domain weather normalization in lib/weather/normalize.ts
+- [X] T025 Implement cache policy constants and in-flight deduplication helpers in lib/server/cache-policy.ts
+- [X] T026 [P] Implement Open-Meteo weather provider adapter boundary in lib/server/weather-provider.ts
+- [X] T027 [P] Implement Open-Meteo geocoding provider adapter boundary in lib/server/geocoding-provider.ts
+- [X] T028 Implement server-only environment validation for WEATHER_PROVIDER, GEOCODING_PROVIDER, and NEXT_PUBLIC_MAP_STYLE_URL in lib/server/env.ts
+- [X] T029 [P] Create reusable loading, empty, error, success, disabled, and permission-denied state component in components/ui/state-message.tsx
 
 **Checkpoint**: Foundation ready; user story implementation can now begin.
 
@@ -76,22 +76,22 @@ testing of each story.
 
 ### Tests for User Story 1 (REQUIRED)
 
-- [ ] T030 [P] [US1] Add contract tests for GET /api/weather/markers runtime, dynamic mode, 5-minute cache behavior, and normalized errors in tests/contract/weather-markers.contract.test.ts
-- [ ] T031 [P] [US1] Add map canvas component tests for loading, empty, error, success, pan, zoom, and marker states in tests/integration/map-canvas-current.test.tsx
-- [ ] T032 [P] [US1] Add marker detail panel component tests for current observation fields and freshness labels in tests/integration/marker-detail-panel.test.tsx
-- [ ] T033 [P] [US1] Add weather map shell tests for selected marker state and Client Component boundary in tests/integration/weather-map-shell-current.test.tsx
-- [ ] T034 [P] [US1] Add server page shell tests for app/page.tsx revalidate policy and no client directive in tests/integration/page-shell.test.tsx
-- [ ] T035 [P] [US1] Add end-to-end global map exploration test in tests/e2e/explore-current-weather.spec.ts
+- [X] T030 [P] [US1] Add contract tests for GET /api/weather/markers runtime, dynamic mode, 5-minute cache behavior, and normalized errors in tests/contract/weather-markers.contract.test.ts
+- [X] T031 [P] [US1] Add map canvas component tests for loading, empty, error, success, pan, zoom, and marker states in tests/integration/map-canvas-current.test.tsx
+- [X] T032 [P] [US1] Add marker detail panel component tests for current observation fields and freshness labels in tests/integration/marker-detail-panel.test.tsx
+- [X] T033 [P] [US1] Add weather map shell tests for selected marker state and Client Component boundary in tests/integration/weather-map-shell-current.test.tsx
+- [X] T034 [P] [US1] Add server page shell tests for app/page.tsx revalidate policy and no client directive in tests/integration/page-shell.test.tsx
+- [X] T035 [P] [US1] Add end-to-end global map exploration test in tests/e2e/explore-current-weather.spec.ts
 
 ### Implementation for User Story 1
 
-- [ ] T036 [US1] Implement GET /api/weather/markers route handler with runtime nodejs, force-dynamic mode, 5-minute TTL, and deduplication in app/api/weather/markers/route.ts
-- [ ] T037 [US1] Implement MapLibre map canvas with option B point-marker rendering in components/weather-map/map-canvas.tsx
-- [ ] T038 [US1] Implement selected marker detail panel for current conditions in components/weather-map/marker-detail-panel.tsx
-- [ ] T039 [US1] Implement WeatherMapShell Client Component for MapLibre lifecycle and selected marker state in components/weather-map/weather-map-shell.tsx
-- [ ] T040 [US1] Compose Server Component page shell with revalidate 3600 and WeatherMapShell import in app/page.tsx
-- [ ] T041 [US1] Add App Router loading fallback for the map screen in app/loading.tsx
-- [ ] T042 [US1] Add App Router error fallback for map/weather failures in app/error.tsx
+- [X] T036 [US1] Implement GET /api/weather/markers route handler with runtime nodejs, force-dynamic mode, 5-minute TTL, and deduplication in app/api/weather/markers/route.ts
+- [X] T037 [US1] Implement MapLibre map canvas with option B point-marker rendering in components/weather-map/map-canvas.tsx
+- [X] T038 [US1] Implement selected marker detail panel for current conditions in components/weather-map/marker-detail-panel.tsx
+- [X] T039 [US1] Implement WeatherMapShell Client Component for MapLibre lifecycle and selected marker state in components/weather-map/weather-map-shell.tsx
+- [X] T040 [US1] Compose Server Component page shell with revalidate 3600 and WeatherMapShell import in app/page.tsx
+- [X] T041 [US1] Add App Router loading fallback for the map screen in app/loading.tsx
+- [X] T042 [US1] Add App Router error fallback for map/weather failures in app/error.tsx
 
 **Checkpoint**: User Story 1 is functional and testable independently as the MVP.
 
@@ -105,18 +105,18 @@ testing of each story.
 
 ### Tests for User Story 2 (REQUIRED)
 
-- [ ] T043 [P] [US2] Add contract tests for GET /api/weather/search runtime, dynamic mode, 24-hour cache behavior, distinguishable results, and normalized errors in tests/contract/weather-search.contract.test.ts
-- [ ] T044 [P] [US2] Add search control component tests for results, ambiguous matches, empty state, error state, and keyboard behavior in tests/integration/search-control.test.tsx
-- [ ] T045 [P] [US2] Add weather map shell tests for search centering and marker detail state in tests/integration/weather-map-shell-search.test.tsx
-- [ ] T046 [P] [US2] Add end-to-end search and inspect flow test in tests/e2e/search-inspect-location.spec.ts
+- [X] T043 [P] [US2] Add contract tests for GET /api/weather/search runtime, dynamic mode, 24-hour cache behavior, distinguishable results, and normalized errors in tests/contract/weather-search.contract.test.ts
+- [X] T044 [P] [US2] Add search control component tests for results, ambiguous matches, empty state, error state, and keyboard behavior in tests/integration/search-control.test.tsx
+- [X] T045 [P] [US2] Add weather map shell tests for search centering and marker detail state in tests/integration/weather-map-shell-search.test.tsx
+- [X] T046 [P] [US2] Add end-to-end search and inspect flow test in tests/e2e/search-inspect-location.spec.ts
 
 ### Implementation for User Story 2
 
-- [ ] T047 [US2] Implement GET /api/weather/search route handler with runtime nodejs, force-dynamic mode, and 24-hour TTL in app/api/weather/search/route.ts
-- [ ] T048 [US2] Implement searchable location control with distinguishable results in components/weather-map/search-control.tsx
-- [ ] T049 [US2] Connect search selection to map centering and marker detail state in components/weather-map/weather-map-shell.tsx
-- [ ] T050 [US2] Add search empty, error, disabled, and keyboard focus states in components/weather-map/search-control.tsx
-- [ ] T051 [US2] Add accessible search labels and result announcements in components/weather-map/search-control.tsx
+- [X] T047 [US2] Implement GET /api/weather/search route handler with runtime nodejs, force-dynamic mode, and 24-hour TTL in app/api/weather/search/route.ts
+- [X] T048 [US2] Implement searchable location control with distinguishable results in components/weather-map/search-control.tsx
+- [X] T049 [US2] Connect search selection to map centering and marker detail state in components/weather-map/weather-map-shell.tsx
+- [X] T050 [US2] Add search empty, error, disabled, and keyboard focus states in components/weather-map/search-control.tsx
+- [X] T051 [US2] Add accessible search labels and result announcements in components/weather-map/search-control.tsx
 
 **Checkpoint**: User Story 2 works independently after foundation and preserves User Story 1 behavior.
 
@@ -130,21 +130,21 @@ testing of each story.
 
 ### Tests for User Story 3 (REQUIRED)
 
-- [ ] T052 [P] [US3] Add contract tests for GET /api/weather/forecast runtime, dynamic mode, 10-minute cache behavior, 24-hour forecast shape, and normalized errors in tests/contract/weather-forecast.contract.test.ts
-- [ ] T053 [P] [US3] Add unit tests for layer and unit preference state in tests/unit/weather-layer-preferences.test.ts
-- [ ] T054 [P] [US3] Add layer control and legend component tests in tests/integration/layer-control.test.tsx
-- [ ] T055 [P] [US3] Add forecast detail panel component tests for available, partial, and unavailable forecasts in tests/integration/forecast-detail-panel.test.tsx
-- [ ] T056 [P] [US3] Add weather map shell tests for layer, unit, legend, and forecast state in tests/integration/weather-map-shell-layers.test.tsx
-- [ ] T057 [P] [US3] Add end-to-end layer and forecast comparison test in tests/e2e/compare-layers-forecast.spec.ts
+- [X] T052 [P] [US3] Add contract tests for GET /api/weather/forecast runtime, dynamic mode, 10-minute cache behavior, 24-hour forecast shape, and normalized errors in tests/contract/weather-forecast.contract.test.ts
+- [X] T053 [P] [US3] Add unit tests for layer and unit preference state in tests/unit/weather-layer-preferences.test.ts
+- [X] T054 [P] [US3] Add layer control and legend component tests in tests/integration/layer-control.test.tsx
+- [X] T055 [P] [US3] Add forecast detail panel component tests for available, partial, and unavailable forecasts in tests/integration/forecast-detail-panel.test.tsx
+- [X] T056 [P] [US3] Add weather map shell tests for layer, unit, legend, and forecast state in tests/integration/weather-map-shell-layers.test.tsx
+- [X] T057 [P] [US3] Add end-to-end layer and forecast comparison test in tests/e2e/compare-layers-forecast.spec.ts
 
 ### Implementation for User Story 3
 
-- [ ] T058 [US3] Implement GET /api/weather/forecast route handler with runtime nodejs, force-dynamic mode, and 10-minute TTL in app/api/weather/forecast/route.ts
-- [ ] T059 [US3] Implement weather layer control for temperature, precipitation, wind, and cloud in components/weather-map/layer-control.tsx
-- [ ] T060 [US3] Implement non-color weather legend cues for active layer values in components/weather-map/weather-legend.tsx
-- [ ] T061 [US3] Implement metric/imperial unit toggle with visit-scoped state in components/weather-map/unit-toggle.tsx
-- [ ] T062 [US3] Add forecast rendering and unavailable-data states to detail panel in components/weather-map/marker-detail-panel.tsx
-- [ ] T063 [US3] Connect layer, unit, legend, and forecast state in components/weather-map/weather-map-shell.tsx
+- [X] T058 [US3] Implement GET /api/weather/forecast route handler with runtime nodejs, force-dynamic mode, and 10-minute TTL in app/api/weather/forecast/route.ts
+- [X] T059 [US3] Implement weather layer control for temperature, precipitation, wind, and cloud in components/weather-map/layer-control.tsx
+- [X] T060 [US3] Implement non-color weather legend cues for active layer values in components/weather-map/weather-legend.tsx
+- [X] T061 [US3] Implement metric/imperial unit toggle with visit-scoped state in components/weather-map/unit-toggle.tsx
+- [X] T062 [US3] Add forecast rendering and unavailable-data states to detail panel in components/weather-map/marker-detail-panel.tsx
+- [X] T063 [US3] Connect layer, unit, legend, and forecast state in components/weather-map/weather-map-shell.tsx
 
 **Checkpoint**: All user stories are independently functional and can be validated through quickstart scenarios.
 
@@ -154,11 +154,11 @@ testing of each story.
 
 **Purpose**: Final documentation, accessibility, performance, security, and release validation across all stories.
 
-- [ ] T064 [P] Add cross-story accessibility regression checks in tests/integration/accessibility.test.tsx
-- [ ] T065 [P] Add production-build performance budget checks for LCP, INP, CLS, 180 KB first-load JS, 750 KB async map chunk, 16 initial tile requests, and third-party script limits in tests/e2e/performance-budget.spec.ts
-- [ ] T066 [P] Document setup, Open-Meteo defaults, map style configuration, provider environment variables, and validation commands in README.md
-- [ ] T067 [P] Harden provider secret handling and server-only import boundaries in lib/server/env.ts
-- [ ] T068 Run full quickstart validation commands and scenarios documented in specs/001-weather-map-data/quickstart.md
+- [X] T064 [P] Add cross-story accessibility regression checks in tests/integration/accessibility.test.tsx
+- [X] T065 [P] Add production-build performance budget checks for LCP, INP, CLS, 180 KB first-load JS, 750 KB async map chunk, 16 initial tile requests, and third-party script limits in tests/e2e/performance-budget.spec.ts
+- [X] T066 [P] Document setup, Open-Meteo defaults, map style configuration, provider environment variables, and validation commands in README.md
+- [X] T067 [P] Harden provider secret handling and server-only import boundaries in lib/server/env.ts
+- [X] T068 Run full quickstart validation commands and scenarios documented in specs/001-weather-map-data/quickstart.md
 
 ---
 
